@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--
+        Recuerdense de SIEMPRE crear sus strings, dimensiones, colores
+        y tamaños de fuentes en el sus archivos respectivos de la carpeta
+        values
+    -->
     <TextView
         android:id="@+id/label_mainActivity_title"
         android:layout_width="wrap_content"
@@ -13,6 +18,19 @@
         android:text="@string/frontend_basico"
         android:textSize="@dimen/text_size_h2"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_mainActivity_toast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_mainActivity_toast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:text="@string/toast_message"
+        android:backgroundTint="@color/material_dynamic_secondary50"
+        app:layout_constraintTop_toBottomOf="@+id/label_mainActivity_title"
         app:layout_constraintBottom_toTopOf="@id/btn_mainActivity_widgets"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +43,7 @@
         android:layout_marginHorizontal="@dimen/margin_medium"
         android:text="@string/widgets"
         android:backgroundTint="@color/material_dynamic_secondary50"
-        app:layout_constraintTop_toBottomOf="@+id/label_mainActivity_title"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mainActivity_toast"
         app:layout_constraintBottom_toTopOf="@id/btn_mainActivity_linearLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

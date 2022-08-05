@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<!--
+    El ScrollView debe tener SIEMPRE un solo child.
+    Agregamos este layout porque nuestra vista es muy grande
+    y iba a ser necesario scrollear
+-->
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,223 +13,224 @@
     android:background="@color/material_dynamic_neutral95"
     tools:context=".LinearLayoutActivity">
 
+    <!-- Los elementos se muestran según su precedencia en el código -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Acción"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        />
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"
-        >
-
-        <LinearLayout
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
+            android:text="Acción"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            />
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Comedia"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        />
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"
-        >
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Romance"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        />
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="none"
-        >
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="148dp"
-                android:layout_height="172dp"
-                android:layout_margin="8dp"
-                app:cardElevation="4dp"
-                />
-
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="196dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginHorizontal="8dp"
-        app:cardElevation="4dp"
-        >
-
-        <LinearLayout
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:weightSum="6"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
             >
 
-            <TextView
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comedia"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Romance"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="148dp"
+                    android:layout_height="172dp"
+                    android:layout_margin="8dp"
+                    app:cardElevation="4dp"
+                    />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="8dp"
+            app:cardElevation="4dp"
+            >
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="Weight: 1"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:background="@color/material_dynamic_tertiary40"
-                />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="6"
+                >
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:text="Weight: 3"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:background="@color/material_dynamic_tertiary50"
-                />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Weight: 1"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@color/material_dynamic_tertiary40"
+                    />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:text="Weight: 2"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:background="@color/material_dynamic_tertiary60"
-                />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:text="Weight: 3"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@color/material_dynamic_tertiary50"
+                    />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:text="Weight: 2"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@color/material_dynamic_tertiary60"
+                    />
 
-    </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

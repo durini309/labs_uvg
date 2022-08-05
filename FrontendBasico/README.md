@@ -6,7 +6,7 @@ Este mini proyecto tiene como objetivo explicar algunos de los layouts y widgets
 
 Aquí se puede acceder a las diferentes ventanas del app. A nivel de código, esta vista sí utiliza strings, dimensiones y tamaños de letra como string resources y no hardcodeadas, a diferencia de las demás vistas. Tomar en cuenta que es **totalmente recomendado** usar resources en vez de valores hardcodeados, pero por motivos de tiempo las demás vistas no se hicieron así.
 
-<img width="329" alt="image" src="https://user-images.githubusercontent.com/13813905/182639095-03d192c6-ef4f-492a-9174-d29a0b03d0bf.png">
+<img width="328" alt="image" src="https://user-images.githubusercontent.com/13813905/182987742-5361f655-5415-44a3-9779-c79d1d22ab37.png">
 
 ## Widgets
 

@@ -8,6 +8,16 @@
     android:padding="16dp"
     >
 
+    <!--
+        Recuerden que 0dp en los childs de un constraint layout significa:
+        "Ocupar el espacio que tengo entre constraints opuestos". Es decir,
+        Si ponen width como 0dp, va a llenar el espacio entre el constraintStart y  constraintEnd,
+        si ponen height, lo haría con top y bottom.
+
+        Otra cosa es que, por lo menos, deben anclar su widget a un lado verticalmente
+        y a un lado horizontalmente. Es decir, con hacer top|start, bottom|start... no hay necesidad
+        de anclar todos los lados, depende mucho de lo que quieren lograr.
+    -->
     <TextView
         android:id="@+id/text_constraint_text1"
         android:layout_width="0dp"

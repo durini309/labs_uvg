@@ -8,4 +8,5 @@
     <string name="grid_layout">Grid Layout</string>
     <string name="table_layout">Table Layout</string>
     <string name="widgets">Widgets</string>
+    <string name="toast_message">Toast message</string>
 </resources>

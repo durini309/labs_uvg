@@ -32,6 +32,7 @@
             />
     </LinearLayout>
 
+    <!-- el drawable background_round lo pueden encontrar en el folder de drawable -->
     <ImageView
         android:id="@+id/icon_widgets_uploadPicture"
         android:layout_width="wrap_content"
