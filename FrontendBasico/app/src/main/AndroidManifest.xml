@@ -17,15 +17,6 @@
             android:name=".WidgetsActivity"
             android:exported="false" />
         <activity
-            android:name=".FrameLayoutActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TableLayoutActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GridLayoutActivity"
-            android:exported="false" />
-        <activity
             android:name=".ConstraintLayoutActivity"
             android:exported="false" />
         <activity
