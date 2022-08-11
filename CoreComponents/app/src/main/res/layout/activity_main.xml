@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_mainActivity_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toTopOf="@+id/button_mainActivity_increment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <Button
+        android:id="@+id/button_mainActivity_increment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="+1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_mainActivity_first"
+        app:layout_constraintTop_toBottomOf="@id/text_mainActivity_counter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_mainActivity_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.33"
+        android:orientation="horizontal"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout_mainActivity_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Nombre"
+        app:layout_constraintTop_toBottomOf="@id/guideline_mainActivity_first"
+        app:layout_constraintBottom_toTopOf="@id/textLayout_mainActivity_lastname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout_mainActivity_lastname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Apellido"
+        app:layout_constraintTop_toBottomOf="@id/textLayout_mainActivity_name"
+        app:layout_constraintBottom_toTopOf="@id/button_mainActivity_createUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_mainActivity_createUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textLayout_mainActivity_lastname"
+        app:layout_constraintBottom_toTopOf="@id/guideline_mainActivity_second"
+        android:text="Crear usuario"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_mainActivity_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.67"
+        android:orientation="horizontal"
+        />
+
+    <Button
+        android:id="@+id/button_mainActivity_intents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intents"
+        app:layout_constraintTop_toBottomOf="@id/guideline_mainActivity_second"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_mainActivity_permissions"
+        />
+
+    <Button
+        android:id="@+id/button_mainActivity_permissions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Permissions"
+        app:layout_constraintTop_toBottomOf="@id/guideline_mainActivity_second"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_mainActivity_intents"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SolucionLab4</string>
+    <string name="actualizacion_disponible">Actualización disponible</string>
+    <string name="descargar">Descargar</string>
+</resources>

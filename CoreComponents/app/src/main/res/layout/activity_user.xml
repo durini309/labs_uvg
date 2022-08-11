@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_userActivity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3"
+        />
+
+    <TextView
+        android:id="@+id/text_userActivity_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido,"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/guideline_userActivity_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/text_userActivity_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/guideline_userActivity_text"
+        app:layout_constraintTop_toBottomOf="@id/text_userActivity_welcome"
+        tools:text="Juan Carlos"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
