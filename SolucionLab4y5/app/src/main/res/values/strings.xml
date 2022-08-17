@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SolucionLab4</string>
+    <string name="actualizacion_disponible">Actualización disponible</string>
+    <string name="descargar">Descargar</string>
+    <string name="friday">Viernes</string>
+    <string name="september_30">30 de Septiembre</string>
+    <string name="end_workday">Terminar jornada</string>
+    <string name="restaurant_name">Ookii</string>
+    <string name="place_address">Plaza 10, 6a avenida zona 10</string>
+    <string name="place_schedule">8:00AM 9:00PM</string>
+    <string name="start">Iniciar</string>
+    <string name="details">Detalles</string>
+    <string name="start_visit">Iniciar visita</string>
+    <string name="phone">Teléfono</string>
+    <string name="schedule">Horario de atención</string>
+    <string name="call">Llamar</string>
+    <string name="additional_info">Información adicional</string>
+</resources>

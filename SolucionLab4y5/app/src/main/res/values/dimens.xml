@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="round_icon_padding">8dp</dimen>
+    <dimen name="margin_xs">4dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_big">24dp</dimen>
+    <dimen name="card_radius">6dp</dimen>
+    <dimen name="card_elevation">3dp</dimen>
+
+    <dimen name="text_header_one">40sp</dimen>
+    <dimen name="text_header_three">24sp</dimen>
+    <dimen name="text_paragraph_large">18sp</dimen>
+    <dimen name="text_paragraph_medium">16sp</dimen>
+    <dimen name="text_paragraph_small">14sp</dimen>
+</resources>

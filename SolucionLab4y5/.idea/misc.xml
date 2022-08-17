@@ -8,7 +8,8 @@
         <entry key="app/src/main/res/drawable/ic_directions.xml" value="0.2275" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2275" />
         <entry key="app/src/main/res/drawable/ic_update.xml" value="0.2275" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.5821167883211679" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>
   </component>

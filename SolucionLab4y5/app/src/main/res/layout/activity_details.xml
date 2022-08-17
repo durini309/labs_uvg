@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <TextView
+        android:id="@+id/text_detailsActivity_placeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_big"
+        android:layout_marginTop="@dimen/margin_big"
+        android:textSize="@dimen/text_header_one"
+        android:textColor="@color/black"
+        tools:text="Ookii"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_detailsActivity_placeAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_big"
+        android:textSize="@dimen/text_paragraph_medium"
+        android:textColor="@color/primary_text"
+        tools:text="Diagonal 14, 12 Calle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_placeName" />
+
+    <Button
+        android:id="@+id/button_detailsActivity_start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_big"
+        android:layout_marginTop="@dimen/margin_big"
+        android:text="@string/start_visit"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_placeAddress" />
+
+    <View
+        android:id="@+id/view_grey"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@color/secondary_text"
+        android:layout_marginTop="@dimen/margin_big"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_detailsActivity_start" />
+
+    <TextView
+        android:id="@+id/text_detailsActivity_infoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginStart="@dimen/margin_big"
+        android:textSize="@dimen/text_header_three"
+        android:textColor="@color/black"
+        android:text="@string/additional_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_grey" />
+
+    <ImageView
+        android:id="@+id/image_detailsActivity_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_big"
+        app:layout_constraintBottom_toBottomOf="@+id/text_detailsActivity_schedule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_detailsActivity_scheduleLabel"
+        app:srcCompat="@drawable/ic_clock" />
+
+    <TextView
+        android:id="@+id/text_detailsActivity_scheduleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginStart="@dimen/margin_small"
+        android:text="@string/schedule"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/image_detailsActivity_schedule"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_infoTitle" />
+
+    <TextView
+        android:id="@+id/text_detailsActivity_schedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:textColor="@color/secondary_text"
+        tools:text="8AM 9PM"
+        app:layout_constraintStart_toEndOf="@+id/image_detailsActivity_schedule"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_scheduleLabel" />
+
+    <TextView
+        android:id="@+id/text_detailsActivity_phoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:text="@string/phone"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/image_detailsActivity_phone"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_schedule" />
+
+    <TextView
+        android:id="@+id/text_detailsActivity_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        tools:text="2323-1524"
+        android:textColor="@color/secondary_text"
+        app:layout_constraintStart_toEndOf="@+id/image_detailsActivity_phone"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_phoneLabel" />
+
+    <ImageView
+        android:id="@+id/image_detailsActivity_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_big"
+        app:layout_constraintBottom_toBottomOf="@+id/text_detailsActivity_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_detailsActivity_phoneLabel"
+        app:srcCompat="@drawable/ic_phone" />
+
+    <Button
+        android:id="@+id/button_detailsActivity_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_big"
+        android:text="@string/call"
+        android:textAllCaps="false"
+        android:textColor="@color/sky_blue_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/text_detailsActivity_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_detailsActivity_schedule"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
