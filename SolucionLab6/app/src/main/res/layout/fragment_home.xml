@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:background="@color/dark_background">
+
+    <TextView
+        android:id="@+id/text_homeFragment_morning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/good_morning"
+        android:textSize="@dimen/font_size_xl"
+        android:textColor="@color/primary_font"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text_homeFragment_name"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/text_homeFragment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_name"
+        android:textSize="@dimen/font_size_large"
+        android:textColor="@color/secondary_font"
+        app:layout_constraintStart_toStartOf="@id/text_homeFragment_morning"
+        app:layout_constraintTop_toBottomOf="@id/text_homeFragment_morning"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

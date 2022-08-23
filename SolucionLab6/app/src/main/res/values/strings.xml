@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SolucionLab6</string>
+    <string name="option_home">Home</string>
+    <string name="option_search">Search</string>
+    <string name="option_library">Your Library</string>
+    <string name="good_morning">Good morning,</string>
+    <string name="user_name">Juan Carlos</string>
+    <string name="your_top_genres">Your top genres</string>
+    <string name="genre_metal">Metal</string>
+    <string name="genre_latin">Latin</string>
+    <string name="genre_pop">Pop</string>
+    <string name="genre_rock">Rock</string>
+    <string name="most_recent">Most recent</string>
+    <string name="liked_songs_title">Liked Songs</string>
+    <string name="liked_songs_counter">%d songs</string>
+</resources>

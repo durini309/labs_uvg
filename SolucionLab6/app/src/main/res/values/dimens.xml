@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="font_size_xl">38sp</dimen>
+    <dimen name="font_size_large">24sp</dimen>
+    <dimen name="font_size_medium">16sp</dimen>
+    <dimen name="font_size_default">14sp</dimen>
+    <dimen name="font_size_small">12sp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_xs">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="genre_card_height">100dp</dimen>
+    <dimen name="genre_card_radius">8dp</dimen>
+    <dimen name="margin_xl">48dp</dimen>
+    <dimen name="icon_small">16dp</dimen>
+</resources>

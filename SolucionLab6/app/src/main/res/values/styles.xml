@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Creamos un estilo para nuestro BottomNavigationView, que hereda del estilo de Material -->
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="materialThemeOverlay">@style/Theme.SolucionLab6.BottomNavigationView</item>
+    </style>
+
+    <!-- Creamos un estilo el cual contendrá los colores y la personalización de nuestra NavBar -->
+    <style name="Theme.SolucionLab6.BottomNavigationView" parent="">
+        <item name="colorPrimary">@color/dark_background</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+</resources>

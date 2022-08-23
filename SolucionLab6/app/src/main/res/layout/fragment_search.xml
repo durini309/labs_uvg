@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SearchFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background"
+    android:paddingHorizontal="@dimen/margin_medium"
+    android:paddingTop="@dimen/margin_xl"
+    >
+
+    <TextView
+        android:id="@+id/text_searchFragment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_search"
+        android:textSize="@dimen/font_size_large"
+        android:textColor="@color/primary_font"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/text_searchFragment_topGenres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_top_genres"
+        android:textColor="@color/primary_font"
+        android:textSize="@dimen/font_size_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/text_searchFragment_title"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_searchFragment_rockGenre"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/genre_card_height"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:backgroundTint="@color/red_background"
+        app:cardCornerRadius="@dimen/genre_card_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/card_searchFragment_metalGenre"
+        app:layout_constraintTop_toBottomOf="@id/text_searchFragment_topGenres"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_xs"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/genre_rock"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_searchFragment_metalGenre"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/genre_card_height"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
+        android:backgroundTint="@color/gray_background"
+        app:cardCornerRadius="@dimen/genre_card_radius"
+        app:layout_constraintStart_toEndOf="@id/card_searchFragment_rockGenre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_searchFragment_topGenres"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_xs"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/genre_metal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_searchFragment_pianoGenre"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/genre_card_height"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:backgroundTint="@color/pink_background"
+        app:cardCornerRadius="@dimen/genre_card_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/card_searchFragment_latinGenre"
+        app:layout_constraintTop_toBottomOf="@id/card_searchFragment_rockGenre"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_xs"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/genre_latin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_searchFragment_latinGenre"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/genre_card_height"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_small"
+        android:backgroundTint="@color/purple_background"
+        app:cardCornerRadius="@dimen/genre_card_radius"
+        app:layout_constraintStart_toEndOf="@id/card_searchFragment_pianoGenre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_searchFragment_rockGenre"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_xs"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/genre_pop"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LibraryFragment"
+    android:background="@color/dark_background"
+    android:paddingHorizontal="@dimen/margin_medium"
+    android:paddingTop="@dimen/margin_xl"
+    >
+
+    <ImageView
+        android:id="@+id/image_libraryFragment_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_account"
+        app:tint="@color/primary_font"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_libraryFragment_title"
+        app:layout_constraintBottom_toBottomOf="@id/text_libraryFragment_title"
+        />
+
+    <TextView
+        android:id="@+id/text_libraryFragment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/option_library"
+        android:textColor="@color/primary_font"
+        android:textSize="@dimen/font_size_large"
+        android:layout_marginStart="@dimen/margin_small"
+        app:layout_constraintStart_toEndOf="@id/image_libraryFragment_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/image_libraryFragment_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:tint="@color/primary_font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_libraryFragment_avatar"
+        app:layout_constraintBottom_toBottomOf="@id/image_libraryFragment_avatar"
+        />
+
+    <ImageView
+        android:id="@+id/image_libraryFragment_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_search"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:tint="@color/primary_font"
+        app:layout_constraintEnd_toStartOf="@id/image_libraryFragment_add"
+        app:layout_constraintTop_toTopOf="@id/image_libraryFragment_avatar"
+        app:layout_constraintBottom_toBottomOf="@id/image_libraryFragment_avatar"
+        />
+
+    <ImageView
+        android:id="@+id/image_libraryFragment_sort"
+        android:layout_width="@dimen/icon_small"
+        android:layout_height="@dimen/icon_small"
+        android:src="@drawable/ic_sort"
+        android:layout_marginTop="24dp"
+        app:tint="@color/secondary_font"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_libraryFragment_avatar"
+        />
+
+    <TextView
+        android:id="@+id/text_libraryFragment_mostRecent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/most_recent"
+        android:textColor="@color/secondary_font"
+        android:textSize="@dimen/font_size_small"
+        android:layout_marginStart="@dimen/margin_small"
+        app:layout_constraintStart_toEndOf="@id/image_libraryFragment_sort"
+        app:layout_constraintTop_toTopOf="@id/image_libraryFragment_sort"
+        app:layout_constraintBottom_toBottomOf="@id/image_libraryFragment_sort"
+        />
+
+    <ImageView
+        android:id="@+id/image_libraryFragment_liked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:padding="@dimen/margin_medium"
+        android:src="@drawable/ic_heart"
+        android:background="@drawable/gradient_like_songs"
+        app:tint="@color/primary_font"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_libraryFragment_sort"
+        />
+
+    <TextView
+        android:id="@+id/text_libraryFragment_likedSongsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:text="@string/liked_songs_title"
+        android:textColor="@color/primary_font"
+        android:textSize="@dimen/font_size_default"
+        app:layout_constraintStart_toEndOf="@id/image_libraryFragment_liked"
+        app:layout_constraintTop_toTopOf="@id/image_libraryFragment_liked"
+        app:layout_constraintBottom_toTopOf="@id/text_libraryFragment_likedSongsCount"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/text_libraryFragment_likedSongsCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:textColor="@color/secondary_font"
+        android:textSize="@dimen/font_size_small"
+        app:layout_constraintStart_toEndOf="@id/image_libraryFragment_liked"
+        app:layout_constraintTop_toBottomOf="@id/text_libraryFragment_likedSongsTitle"
+        app:layout_constraintBottom_toBottomOf="@id/image_libraryFragment_liked"
+        tools:text="100 songs"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
