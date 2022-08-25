@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.durini.jetpacknavigation.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_createUserFragment"
+            app:destination="@id/createUserFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.durini.jetpacknavigation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="fullName"
+            app:argType="string" />
+        <!--
+            Esta acción le dice a Android que, cuando se navegue al login, haga pop
+            de los fragments que se abrieron entre el Login y el Home. Luego,
+            como se navegó directamente a este fragment, se abrió otra "copia" del Login,
+            por ende habrán 2 fragments de Login en el stack. Al agregar popUpToInclusive
+            hacemos que la nueva copia se elimine del stack.
+        -->
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/createUserFragment"
+        android:name="com.durini.jetpacknavigation.CreateUserFragment"
+        android:label="fragment_create_user"
+        tools:layout="@layout/fragment_create_user" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <!--
+            Esta acción le dice a Android que, cuando se navegue al home,
+            haga pop de los fragments que se abrieron entre el Login y el createUser.
+        -->
+        <action
+            android:id="@+id/action_createUserFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            />
+    </fragment>
+</navigation>
