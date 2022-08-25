@@ -30,6 +30,7 @@ Luego se creó otro estilo, el cual será el estilo como tal que utilizará nues
 ### Paso 3
 
 Si corremos el app, nuestra Nav Bar se sigue viendo igual:
+
 ![image](https://user-images.githubusercontent.com/13813905/186285896-b13b74a7-7c34-4437-8719-f0bdf3376d31.png)
 
 Para cambiar esto, en el archivo `themes.xml`, asignamos el estilo creado como estilo de nuestras nav bar.
@@ -38,11 +39,13 @@ Para cambiar esto, en el archivo `themes.xml`, asignamos el estilo creado como e
 ```
 
 Ahora nuestra nav bar ya se ve como deseamos:
+
 ![image](https://user-images.githubusercontent.com/13813905/186285995-1afb4941-e695-41d5-931b-66b93d543bea.png)
 
 ## Menú
 
 Nuestro `BottomNavigationView` debe tener asignado un menú, y así poder desplegar todas las opciones que el usuario podrá visitar. Para hacer esto, se hizo click derecho sobre la carpeta **res**, luego se seleccionó **Android Resource File** y por último, se creó un archivo de tipo **menu**:
+
 ![image](https://user-images.githubusercontent.com/13813905/186285651-fe635c7e-23ee-4490-8858-47342f6671c4.png)
 
 Ya dentro de este archivo, se asignaron todas las opciones que iba a tener el menú.
@@ -54,7 +57,5 @@ Para la navegación utilizamos un `FragmentContainerView` que fue declarado dent
 ## Resultado Final
 
 ![image](https://user-images.githubusercontent.com/13813905/186286062-49e117c2-c467-40aa-8329-f8c1b0e5d37c.png)
-
 ![image](https://user-images.githubusercontent.com/13813905/186286079-5c1350f8-410e-46da-8df9-6d3320985341.png)
-
 ![image](https://user-images.githubusercontent.com/13813905/186286097-6274aa5f-2e8f-4271-a1d9-adf9e14dc970.png)
