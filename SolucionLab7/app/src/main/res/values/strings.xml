@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SolucionLab7</string>
+    <string name="create_account">Crear cuenta</string>
+    <string name="update_profile">Actualizar perfil</string>
+    <string name="prompt_email">Ingrese su correo</string>
+    <string name="create_account_here">¿Nuevo usuario? ¡Crea tu cuenta aquí!</string>
+    <string name="log_in">Iniciar sesión</string>
+    <string name="lab_7">Laboratorio 7</string>
+    <string name="new_account">Nueva cuenta</string>
+    <string name="user_not_found">Usuario no existe</string>
+    <string name="home_content">Hola %s, necesitamos que actualices tu perfil!</string>
+    <string name="good_morning_title">¡Buenos días!</string>
+    <string name="my_profile_title">Mi perfil</string>
+</resources>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ImageLoaderActivity">
+
+    <ImageView
+        android:id="@+id/image_imageLoaderActivity_1"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_imageLoaderActivity_2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        />
+
+    <Button
+        android:id="@+id/button_imageLoaderActivity_image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/load"
+        app:layout_constraintTop_toBottomOf="@id/image_imageLoaderActivity_1"
+        app:layout_constraintStart_toStartOf="@id/image_imageLoaderActivity_1"
+        app:layout_constraintEnd_toEndOf="@id/image_imageLoaderActivity_1"
+        />
+
+    <ImageView
+        android:id="@+id/image_imageLoaderActivity_2"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintStart_toEndOf="@id/image_imageLoaderActivity_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        />
+
+    <Button
+        android:id="@+id/button_imageLoaderActivity_image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/load"
+        app:layout_constraintTop_toBottomOf="@id/image_imageLoaderActivity_2"
+        app:layout_constraintStart_toStartOf="@id/image_imageLoaderActivity_2"
+        app:layout_constraintEnd_toEndOf="@id/image_imageLoaderActivity_2"
+        />
+
+    <ImageView
+        android:id="@+id/image_imageLoaderActivity_3"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_imageLoaderActivity_4"
+        app:layout_constraintTop_toBottomOf="@id/button_imageLoaderActivity_image1"
+        tools:srcCompat="@tools:sample/avatars"
+        />
+
+    <Button
+        android:id="@+id/button_imageLoaderActivity_image3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/load"
+        app:layout_constraintTop_toBottomOf="@id/image_imageLoaderActivity_3"
+        app:layout_constraintStart_toStartOf="@id/image_imageLoaderActivity_3"
+        app:layout_constraintEnd_toEndOf="@id/image_imageLoaderActivity_3"
+        />
+
+    <ImageView
+        android:id="@+id/image_imageLoaderActivity_4"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_margin="@dimen/margin_small"
+        app:layout_constraintStart_toEndOf="@id/image_imageLoaderActivity_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_imageLoaderActivity_image2"
+        tools:srcCompat="@tools:sample/avatars"
+        />
+
+    <Button
+        android:id="@+id/button_imageLoaderActivity_image4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/load"
+        app:layout_constraintTop_toBottomOf="@id/image_imageLoaderActivity_4"
+        app:layout_constraintStart_toStartOf="@id/image_imageLoaderActivity_4"
+        app:layout_constraintEnd_toEndOf="@id/image_imageLoaderActivity_4"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

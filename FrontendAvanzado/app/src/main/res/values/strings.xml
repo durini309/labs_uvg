@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Frontend Avanzado</string>
+    <string name="to_home">to home</string>
+    <string name="login_title">Login</string>
+    <string name="home_title">Home</string>
+    <string name="to_details">To Details</string>
+    <string name="details_title">Details</string>
+    <string name="go_to_material_toolbar_activity">Go to Material Toolbar Activity</string>
+    <string name="favs">Favoritos</string>
+    <string name="search">Buscar</string>
+    <string name="sync">Sincronizar</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="appbar">Appbar</string>
+    <string name="image_loader">Image loader</string>
+    <string name="recyclerview">RecyclerView</string>
+    <string name="load">Cargar</string>
+    <string name="sort">Ordenar</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="font_size_title">32sp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="icon_rounded_padding">32dp</dimen>
+</resources>
