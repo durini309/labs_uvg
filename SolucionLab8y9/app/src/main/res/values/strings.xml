@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SolucionLab8y9</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="species">Species:</string>
+    <string name="status">Status:</string>
+    <string name="gender">Gender:</string>
+    <string name="origin">Origin:</string>
+    <string name="episodes">Episodes:</string>
+    <string name="characters">Characters</string>
+    <string name="character_detail">Character Detail</string>
+    <string name="error_fetching">Error al llamar al API</string>
+</resources>
