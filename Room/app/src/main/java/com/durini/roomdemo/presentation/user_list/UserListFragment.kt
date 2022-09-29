@@ -1,9 +1,11 @@
 package com.durini.roomdemo.presentation.user_list
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,17 +24,19 @@ import kotlinx.coroutines.launch
 class UserListFragment : Fragment(R.layout.fragment_user_list), UserAdapter.UserClickListeners {
 
     private lateinit var fabCreateUser: FloatingActionButton
+    private lateinit var fabDeleteAll: FloatingActionButton
     private lateinit var recyclerUsers: RecyclerView
     private lateinit var progressBar: ProgressBar
     private lateinit var database: Database
-    private lateinit var userList: List<User>
     private lateinit var userAdapter: UserAdapter
+    private val userList: MutableList<User> = mutableListOf()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recyclerUsers = view.findViewById(R.id.recycler_users)
         progressBar = view.findViewById(R.id.progress_users)
         fabCreateUser = view.findViewById(R.id.fab_mainActivity_createUser)
+        fabDeleteAll = view.findViewById(R.id.fab_mainActivity_deleteAll)
         database = Room.databaseBuilder(
             requireContext(),
             Database::class.java,
@@ -49,6 +53,9 @@ class UserListFragment : Fragment(R.layout.fragment_user_list), UserAdapter.User
                 UserListFragmentDirections.actionUserListFragmentToUserFragment()
             )
         }
+        fabDeleteAll.setOnClickListener {
+            showDeleteDialog()
+        }
     }
 
     private fun getUsers() {
@@ -56,7 +63,7 @@ class UserListFragment : Fragment(R.layout.fragment_user_list), UserAdapter.User
         recyclerUsers.visibility = View.GONE
         CoroutineScope(Dispatchers.IO).launch {
             val users = database.userDao().getUsers()
-            userList = users
+            userList.addAll(users)
             CoroutineScope(Dispatchers.Main).launch {
                 progressBar.visibility = View.GONE
                 setupRecycler()
@@ -71,6 +78,43 @@ class UserListFragment : Fragment(R.layout.fragment_user_list), UserAdapter.User
             layoutManager = LinearLayoutManager(requireContext())
             setHasFixedSize(true)
             adapter = userAdapter
+        }
+    }
+
+    private fun deleteAllUsers() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val users = database.userDao().deleteAll()
+            CoroutineScope(Dispatchers.Main).launch {
+                if (users > 0) {
+                    Toast.makeText(
+                        requireContext(),
+                        "Se han eliminado $users usuarios",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    Toast.makeText(
+                        requireContext(),
+                        "Error al tratar de eliminar usuarios",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        }
+    }
+
+    private fun showDeleteDialog() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.apply {
+            setTitle("Advertencia")
+            setMessage("¿Estás seguro que deseas eliminar la base de datos?")
+            setPositiveButton("Eliminar"
+            ) { _, _ ->
+                deleteAllUsers()
+                userList.clear()
+                userAdapter.notifyDataSetChanged()
+            }
+            setNegativeButton("Cancelar") { _, _ -> }
+            show()
         }
     }
 

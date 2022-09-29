@@ -10,7 +10,7 @@ import com.durini.roomdemo.R
 import com.durini.roomdemo.domain.model.User
 
 class UserAdapter(
-    private val dataSet: List<User>,
+    private val dataSet: MutableList<User>,
     private val listeners: UserClickListeners
 ) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
 

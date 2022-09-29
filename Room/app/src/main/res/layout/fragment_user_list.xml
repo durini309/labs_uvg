@@ -35,4 +35,17 @@
         app:elevation="6dp"
         android:contentDescription="add" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_mainActivity_deleteAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/red"
+        app:srcCompat="@drawable/ic_delete"
+        app:tint="@color/white"
+        app:elevation="6dp"
+        android:contentDescription="add" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

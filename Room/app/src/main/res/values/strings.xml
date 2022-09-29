@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Room</string>
+    <string name="delete_db">Eliminar DB</string>
 </resources>
