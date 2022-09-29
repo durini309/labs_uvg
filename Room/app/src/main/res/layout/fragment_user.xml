@@ -5,82 +5,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/margin_medium"
-    tools:context=".ui.fragments.LoginFragment"
+    android:padding="@dimen/margin_large"
+    tools:context=".presentation.user.UserFragment"
     >
 
-    <ImageView
-        android:id="@+id/icon_loginFragment_rickMorty"
+    <TextView
+        android:id="@+id/label_createUser_instructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_rick_and_morty"
+        android:text="Agrega la información del nuevo usuario. Todos los campos son obligatorios"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/inputLayout_loginFragment_email"
-        app:layout_constraintVertical_chainStyle="packed"
         />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputLayout_loginFragment_email"
+        android:id="@+id/inputLayout_createUser_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_xl"
-        android:hint="@string/email"
+        android:hint="Nombre completo"
+        android:layout_marginTop="@dimen/margin_small"
+        app:startIconDrawable="@drawable/ic_person"
+        app:layout_constraintTop_toBottomOf="@id/label_createUser_instructions"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/icon_loginFragment_rickMorty"
-        app:layout_constraintBottom_toTopOf="@id/inputLayout_loginFragment_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/inputLayout_loginFragment_password"
+        android:id="@+id/inputLayout_createUser_country"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:hint="@string/password"
-        app:passwordToggleEnabled="true"
+        android:hint="País"
+        android:layout_marginTop="@dimen/margin_small"
+        app:startIconDrawable="@drawable/ic_home"
+        app:layout_constraintTop_toBottomOf="@id/inputLayout_createUser_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputLayout_loginFragment_email"
-        app:layout_constraintBottom_toTopOf="@id/button_loginFragment_login"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         >
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayout_createUser_dob"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Edad"
+        android:layout_marginTop="@dimen/margin_small"
+        app:startIconDrawable="@drawable/ic_cake"
+        app:layout_constraintTop_toBottomOf="@id/inputLayout_createUser_country"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button_loginFragment_login"
+        android:id="@+id/button_saveUser"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_large"
-        android:text="@string/login"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/inputLayout_loginFragment_password"
         app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Crear"
         />
 
-    <TextView
-        android:id="@+id/text_loginFragment_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_medium"
-        android:text="@string/my_email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>

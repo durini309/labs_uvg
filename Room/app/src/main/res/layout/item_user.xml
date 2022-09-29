@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_height"
+    android:id="@+id/layout_item_user"
+    android:paddingHorizontal="16dp"
+    >
+
+    <TextView
+        android:id="@+id/text_user_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_large"
+        android:textColor="@color/primary_font"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="#1"
+        />
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_font"
+        android:layout_marginStart="@dimen/margin_medium"
+        app:layout_constraintStart_toEndOf="@id/text_user_id"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text_user_country"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Juan Carlos Durini"
+        />
+
+    <TextView
+        android:id="@+id/text_user_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondary_font"
+        android:layout_marginStart="@dimen/margin_medium"
+        app:layout_constraintStart_toEndOf="@id/text_user_id"
+        app:layout_constraintTop_toBottomOf="@id/text_user_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Guatemala"
+        />
+
+    <View
+        android:id="@+id/separator_country_age"
+        android:layout_width="8dp"
+        android:layout_height="1dp"
+        android:background="@color/secondary_font"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@id/text_user_country"
+        app:layout_constraintEnd_toStartOf="@id/text_user_age"
+        app:layout_constraintTop_toTopOf="@id/text_user_country"
+        app:layout_constraintBottom_toBottomOf="@id/text_user_country"
+        />
+
+    <TextView
+        android:id="@+id/text_user_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/secondary_font"
+        app:layout_constraintStart_toEndOf="@id/separator_country_age"
+        app:layout_constraintTop_toTopOf="@id/text_user_country"
+        app:layout_constraintBottom_toBottomOf="@id/text_user_country"
+        tools:text="28 años"
+        />
+
+    <ImageView
+        android:id="@+id/image_user_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        app:tint="@color/red"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/image_user_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_edit"
+        app:tint="@color/teal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_user_delete"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
