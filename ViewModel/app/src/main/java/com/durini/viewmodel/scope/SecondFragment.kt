@@ -52,6 +52,10 @@ class SecondFragment : Fragment() {
         binding.buttonSecondFragmentCheckIn.setOnClickListener {
             secondViewModel.checkIn()
         }
+
+        binding.buttonSecondFragmentReset.setOnClickListener {
+            secondViewModel.reset()
+        }
     }
 
     private fun handleCheckInStatus(status: SecondViewModel.CheckInStatus) {
@@ -90,6 +94,7 @@ class SecondFragment : Fragment() {
                     textSecondFragmentErrorMessage.visibility = View.GONE
                     textSecondFragmentSuccessStatus.visibility = View.VISIBLE
                     progressSecondFragment.visibility = View.GONE
+                    textSecondFragmentSuccessStatus.text = status.message
                 }
             }
         }

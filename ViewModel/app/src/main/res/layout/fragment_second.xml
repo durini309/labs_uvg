@@ -79,4 +79,16 @@
         tools:text="Error!"
         />
 
+    <Button
+        android:id="@+id/button_secondFragment_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Reiniciar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
