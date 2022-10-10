@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_item_sync"
+        android:title="@string/sync"
+        android:icon="@drawable/ic_sync"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/menu_item_asc"
+        android:title="@string/order_asc"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/menu_item_des"
+        android:title="@string/order_desc"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/menu_item_logout"
+        android:title="@string/logout"
+        app:showAsAction="never"
+        />
+
+</menu>
