@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SolucionLab12</string>
+    <string name="password">Contraseña</string>
+    <string name="email">Correo</string>
+    <string name="my_email">jcdurini@uvg.edu.gt</string>
+    <string name="login">Iniciar sesión</string>
+</resources>
