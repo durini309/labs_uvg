@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "814928101162",
+    "project_id": "fir-uvg-16297",
+    "storage_bucket": "fir-uvg-16297.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814928101162:android:edc731ac38258ed4afa853",
+        "android_client_info": {
+          "package_name": "com.durini.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814928101162-u8ea9cm6sckoafsafvgc16n0t6stjnkc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJuCqhSNjd-0VM2NPU-yIOFarft9hWy44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814928101162-u8ea9cm6sckoafsafvgc16n0t6stjnkc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

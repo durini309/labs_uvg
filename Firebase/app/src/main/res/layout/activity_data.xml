@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.data.DataActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_insertRecord_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/input_insertRecord_place"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_insertRecord_place"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Place name"
+        app:layout_constraintTop_toBottomOf="@id/input_insertRecord_id"
+        app:layout_constraintBottom_toTopOf="@id/switch_insertRecord_mask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_insertRecord_mask"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mandatory mask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_insertRecord_place"
+        app:layout_constraintBottom_toTopOf="@id/button_insert"
+        android:checked="true"
+        />
+
+    <Button
+        android:id="@+id/button_insert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Insert"
+        app:layout_constraintTop_toBottomOf="@id/switch_insertRecord_mask"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_mainActivity_second"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_mainActivity_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_getRecord_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="ID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_mainActivity_second"
+        app:layout_constraintBottom_toTopOf="@id/switch_getRecord_mask"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_getRecord_mask"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mandatory mask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_getRecord_id"
+        app:layout_constraintBottom_toTopOf="@id/button_getByID"
+        android:checked="true"
+        />
+
+    <Button
+        android:id="@+id/button_getByID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Get by ID"
+        app:layout_constraintTop_toBottomOf="@id/switch_getRecord_mask"
+        app:layout_constraintBottom_toTopOf="@id/button_getByMask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/button_getByMask"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Get by Mask filter"
+        app:layout_constraintTop_toBottomOf="@id/button_getByID"
+        app:layout_constraintBottom_toTopOf="@id/text_record"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/text_record"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="No results"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_getByMask"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
